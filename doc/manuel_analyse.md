@@ -1,11 +1,11 @@
-# Manuel d'Analyse Statistique : Indice "Synchro-Affect"
+# Manuel d'analyse statistique : Indice "synchro-affect"
 **Laboratoire d'EEG Quantitatif & Informatique Affective**
 
 Ce manuel sert de guide d'interprétation pour le script `analyse_stats.py` mis à jour. Il détaille comment lire le rapport statistique de la console, valider les métriques mathématiques avancées, et identifier les biais expérimentaux.
 
 ---
 
-## 1. Rappel de l'Hypothèse Scientifique à Valider
+## 1. Rappel de l'hypothèse scientifique à valider
 
 L'objectif de ce pipeline d'analyse est de démontrer graphiquement et statistiquement une double dissociation :
 1. La Charge Mentale (Phase 2) active le cerveau (hausse de la vigilance corticale Beta) mais maintient l'équilibre émotionnel (Asymétrie FAA stable près de 0).
@@ -13,31 +13,31 @@ L'objectif de ce pipeline d'analyse est de démontrer graphiquement et statistiq
 
 ---
 
-## 2. Décoder le Rapport Statistique & Indicateurs Avancés
+## 2. Décoder le rapport statistique & indicateurs avancés
 
 Lorsque vous lancez le script, le terminal extrait automatiquement la dernière session et affiche :
 
-### A. Statistiques de Dispersion Basiques
+### A. Statistiques de dispersion basiques
 * **mean (Moyenne)** : Point central de stabilisation de la phase. Une FAA saine au repos se situe entre `-0.05` et `+0.10`. Une chute sous `-0.25` valide l'état de détresse psychologique.
 * **std (Écart-type)** : Reflet de la réactivité. Un `std` élevé en Phase 3 indique une forte variabilité dynamique induite par l'effet de surprise du stimulus.
 
-### B. Métriques Critiques
+### B. Métriques critiques
 * **Test T de Student (P-Value)** : Détermine si l'écart entre la Baseline et le Stress est le fruit du hasard ou d'une authentique modification neurophysiologique. La valeur cible doit être strictement inférieure à **0.05** (\(p < 0.05\)) pour publier les résultats.
 * **Indicateur de Résilience Affective** : Exprimé en %, il évalue la vitesse à laquelle le cortex préfrontal gauche reprend le dessus durant la phase de récupération (*Recovery*). Un score proche de 100% indique un sujet hautement résilient.
 
 ---
 
-## 3. Guide d'Interprétation du Graphique Bi-Volet (300 DPI)
+## 3. Guide d'interprétation du graphique Bi-Volet (300 DPI)
 
 Le graphique généré superpose l'évolution temporelle brute corrigée avec des lignes pointillées de transition de phase précises.
 
-### Étape A : Analyser le Volet Supérieur – L'Index d'Asymétrie FAA (Courbe Violette)
+### Étape A : Analyser le volet supérieur – L'index d'asymétrie FAA (Courbe Violette)
 * **En zone 1 (Gris - Baseline)** : Point d'étalonnage. La courbe doit fluctuer de façon stationnaire autour de 0.
 * **En zone 2 (Bleu - Charge Mentale)** : Malgré l'effort de calcul, la courbe reste stable près du zéro. Le sujet est concentré mais ne se sent pas agressé.
 * **En zone 3 (Rouge - Stress Réactif)** : Chute libre immédiate sous la ligne de symétrie. C'est la signature de l'activation préfrontale droite d'évitement.
 * **En zone 4 (Vert - Recovery)** : Remontée graduelle de la courbe violette, validant l'efficacité de la cohérence cardiaque.
 
-### Étape B : Analyser le Volet Inférieur – La Vigilance Beta (Courbe Orange)
+### Étape B : Analyser le volet inférieur – La vigilance Beta (Courbe Orange)
 * **En zone 1** : Plancher d'activité.
 * **En zone 2** : Profil en marche d'escalier ascendante franche. La puissance spectrale Beta confirme l'engagement cognitif.
 * **En zone 3** : Maintien à un niveau haut avec pics oscillatoires majeurs provoqués par les sursauts musculaires et micro-mouvements de surprise.
