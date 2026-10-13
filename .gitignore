@@ -1,0 +1,8 @@
+.venv/
+.DS_Store
+.vscode/
+*.pyc
+*.csv
+*.docx
+*.pdf
+*_graphique.png
